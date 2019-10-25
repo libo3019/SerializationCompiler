@@ -1,0 +1,24 @@
+package compilers.myjava;
+message class_declartion
+{
+	required string klass_name = 10;
+	optional string super_klass_name = 20;
+	optional map<string, list<vector<string>>> interfaces = 30;
+	optional map<string, list<vector<float32>>> interfaces1 = 80;
+	optional vector<string> template_parameters = 40;
+	optional vector<method_declaration> method_declarations = 50;
+	optional vector<field_declaration> field_declarations = 60;
+	optional vector<uint8> byte_code = 70;
+};
+message method_declaration
+{
+	required string method_name = 10;
+	required string return_type = 20;
+	optional vector<string> method_parameters = 30;
+	optional vector<string> template_parameters = 40;
+};
+message field_declaration
+{
+	required string field_name = 10;
+	required string field_type = 20;
+}

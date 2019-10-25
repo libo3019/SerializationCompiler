@@ -1,0 +1,28 @@
+package com.lhc.serialization_data2;
+
+// class Person
+message Person {
+  //required 必须设置（不能为null）
+  required string name = 1;
+  //int32 对应java中的int
+  required int32 id = 2;
+  //optional 可以为空
+  optional string email = 3;
+
+  enum PhoneType {
+    MOBILE = 0,
+    HOME = 9,
+    WORK,
+  }
+
+  message PhoneNumber {
+    required string number = 1 ;
+    optional PhoneType type = 2 [default = HOME];
+  }
+   //repeated 重复的 （集合）
+  repeated PhoneNumber phones = 4;
+}
+
+message AddressBook {
+  repeated Person people = 1;
+}

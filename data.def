@@ -1,0 +1,48 @@
+package compiler.information;
+
+message data2
+{
+	optional int32 f21 = 1;
+	string f23 = 2; 
+};
+
+message data1
+{
+	optional int32 f1 = 1;
+	optional int32 exist_f1_flag = 2;	
+	data2 f2 = 3;
+	list<list<list<data2>>> f5 = 4;
+	list<list<list<int32>>> f53 = 13;
+	list<list<list<string>>> f39 = 33;
+	vector<list<vector<string>>> f390 = 53;
+	map<string,list<vector<string>>> f391 = 55;
+	optional map<string,list<vector<list<vector<string>>>>> f591 = 93;
+	set<list<string>> f991 = 94;
+	string f123 = 90;
+	map<string, list<float32>> f310 = 100;
+	vector<list<float64>> f31 = 103;
+	string f3 = 45;
+};
+
+message Person {
+   string name = 1;
+   int32 id = 2;
+   optional string email= 3;     
+   list<repeated PhoneNumber> some_phones = 5;
+   repeated PhoneNumber phone= 4;
+};
+ 
+ 
+ message PhoneNumber {
+        string number = 1;
+        optional int32 type = 2;
+		map<string, list<map<string,MSG1>>> map1 = 3;
+   };
+message AddressBook {
+   list<Person> person = 1;
+};
+message MSG1
+ {
+	int32 seq = 1;
+	string msg = 2;
+ };

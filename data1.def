@@ -1,0 +1,22 @@
+package data.information1;
+
+// class Person
+message Person {
+ 
+  required string name = 1;
+ 
+  required int32 id = 2;
+ 
+  optional string email = 3;
+
+  message PhoneNumber {
+    required string number = 1;
+    optional int32 type = 2;
+  }
+   
+  repeated PhoneNumber phones = 4;
+}
+
+message AddressBook {
+  repeated Person people = 1;
+}
