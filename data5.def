@@ -16,10 +16,20 @@ message Animal
 	float32 leg = 5;
 	int32 heart = 7;
 }
-union aminal
+union animal
 {
  People a_people = 1;
  Animal an_animal = 3;
  float32 other = 5;
  list<Animal> lst1 = 9;
+}
+union all_msg
+{
+	message msg
+	{
+		animal an_animal = 1;
+		People a_people = 2;
+	}
+	msg data_msg = 1;
+	animal an_animal = 2;
 }
