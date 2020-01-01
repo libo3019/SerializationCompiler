@@ -1,0 +1,113 @@
+package com.lhc.data.network;
+
+message any_pkg //seq,size,type[,value]
+{
+	enum pkg_type
+	{
+		CONNECT_PKG,
+		DISCONNECT_PKG,
+		LOGIN_PKG,
+		LOGOUT_PKG,
+		CHAT_PKG,
+	}
+	pkg_type pkg_type = 1;
+	vector<uint8> data = 3;
+}
+// class Person
+message Person {
+	//required 必须设置（不能为null）
+	required string name = 1;
+	//int32 对应java中的int
+	required int32 id = 2;
+	//optional 可以为空
+	optional string email = 3;
+	list<list<list<int32>>> f53 = 13;
+	list<list<list<string>>> f39 = 33;
+	vector<list<vector<string>>> f390 = 53;
+	map<string,list<vector<string>>> f391 = 55;
+	optional map<string,list<vector<list<vector<string>>>>> f591 = 93;
+	set<list<string>> f991 = 94;
+	string f123 = 90;
+	map<string, list<float32>> f310 = 100;
+}
+message CONNECT_PKG {
+	//required 必须设置（不能为null）
+	required string name = 1;
+	//int32 对应java中的int
+	required int32 id = 2;
+	//optional 可以为空
+	optional string email = 3;
+	list<list<list<int32>>> f53 = 13;
+	list<list<list<string>>> f39 = 33;
+	vector<list<vector<string>>> f390 = 53;
+	map<string,list<vector<string>>> f391 = 55;
+	optional map<string,list<vector<list<vector<string>>>>> f591 = 93;
+	set<list<string>> f991 = 94;
+	string f123 = 90;
+	map<string, list<float32>> f310 = 100;
+	vector<list<float64>> f31 = 103;
+	string f3 = 45;
+
+  enum PhoneType {
+    MOBILE = 0,
+    HOME = 1,
+    WORK = 2,
+  };
+
+  message DISCONNECT_PKG {
+  
+  
+	  enum PhoneType1 {
+		MOBILE1 = 0,
+		HOME1 = 1,
+		WORK1 = 2,
+	  };
+    required string number = 1;
+    optional PhoneType type = 2 [default = HOME];
+	optional int32 field3 = 3 [default = 1];
+	optional float32 field4 = 4 [default = 5.9];
+	optional string str1 = 5 [default = "01074747474"];
+	list<list<list<int32>>> f53 = 13;
+	list<list<list<string>>> f39 = 33;
+	vector<list<vector<string>>> f390 = 53;
+	map<string,list<vector<string>>> f391 = 55;
+	optional map<string,list<vector<list<vector<string>>>>> f591 = 93;
+	set<list<string>> f991 = 94;
+	string f123 = 90;
+	map<string, list<float32>> f310 = 100;
+	vector<list<float64>> f31 = 103;
+	string f3 = 45;
+	list<vector<map<PhoneType1, list<string>>>> phontes = 300;
+  }
+  message PhoneNumber {
+  
+  
+	  enum PhoneType1 {
+		MOBILE1 = 0,
+		HOME1 = 1,
+		WORK1 = 2,
+	  };
+    required string number = 1;
+    optional PhoneType type = 2 [default = HOME];
+	optional int32 field3 = 3 [default = 1];
+	optional float32 field4 = 4 [default = 5.9];
+	optional string str1 = 5 [default = "01074747474"];
+	list<list<list<int32>>> f53 = 13;
+	list<list<list<string>>> f39 = 33;
+	vector<list<vector<string>>> f390 = 53;
+	map<string,list<vector<string>>> f391 = 55;
+	optional map<string,list<vector<list<vector<string>>>>> f591 = 93;
+	set<list<string>> f991 = 94;
+	string f123 = 90;
+	map<string, list<float32>> f310 = 100;
+	vector<list<float64>> f31 = 103;
+	string f3 = 45;
+	list<vector<map<PhoneType1, list<string>>>> phontes = 300;
+  }
+   //repeated 重复的 （集合）
+  repeated PhoneNumber phones = 4;
+}
+
+message CHAT_PKG {
+  repeated Person people = 1;
+}
