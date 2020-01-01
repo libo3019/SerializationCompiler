@@ -1,0 +1,25 @@
+package com.lhc.data3;
+
+// class Person
+message People
+{
+	string eye = 1;
+	float32 arm = 3;
+	float64 other = 5;
+	int32 heart = 7;
+	int64 brain = 100;
+}
+message Animal
+{
+	string eye = 1;
+	float64 other = 3;
+	float32 leg = 5;
+	int32 heart = 7;
+}
+union aminal
+{
+ People a_people = 1;
+ Animal an_animal = 3;
+ float32 other = 5;
+ list<Animal> lst1 = 9;
+}
