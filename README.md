@@ -17,3 +17,4 @@ Support message like C/C++ struct.<br>
 Support union like C/C++ union.<br>
 Support repeat field like a vector.<br>
 Support the default value for integer, bool, string and enum type.<br>
+Support the nested definition: a message or union or enum can be defined in the another message, union.<br>
