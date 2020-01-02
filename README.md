@@ -19,3 +19,5 @@ Support repeat field like a vector.<br>
 Support default value for integer, bool, string and enum type.<br>
 Support nested definition: a message or union or enum can be defined in the another message, union.<br>
 Support complex container type who contains any container like “queue&lt;list&lt;stack&lt;vector&lt;msg1&gt;&gt;&gt;&gt;”.<br>
+
+You can use SerializationCompiler to process file formats and network protocols.
