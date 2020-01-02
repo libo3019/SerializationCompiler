@@ -1,0 +1,30 @@
+package com.lhc.data3;
+
+// class Person
+message desk
+{
+	string desk_name = 1;
+	uint32 legs = 3;
+}
+message office
+{
+	queue<uint32> people_number = 1;
+	queue<desk> all_desks = 3;
+}
+message other_office
+{
+	stack<uint32> people_number = 1;
+	stack<desk> all_desks = 3;
+}
+
+message midium_office
+{
+	stack<queue<stack<uint32>>> people_number = 1;
+	queue<stack<queue<desk>>> all_desks = 3;
+}
+
+message large_office
+{
+	list<stack<queue<stack<uint32>>>> people_number = 1;
+	queue<stack<vector<queue<desk>>>> all_desks = 3;
+}

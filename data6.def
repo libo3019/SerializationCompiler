@@ -1,0 +1,13 @@
+package com.lhc.data3;
+
+// class Person
+message desk
+{
+	string desk_name = 1;
+	uint32 legs = 3;
+}
+message office
+{
+	queue<uint32> people_number = 1;
+	queue<desk> all_desks = 3;
+}
