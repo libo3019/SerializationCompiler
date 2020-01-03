@@ -11,7 +11,7 @@ message office
 	queue<uint32> people_number = 1;
 	queue<desk> all_desks = 3;
 }
-message other_office
+union other_office
 {
 	stack<uint32> people_number = 1;
 	stack<desk> all_desks = 3;
