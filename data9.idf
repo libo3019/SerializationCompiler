@@ -1,0 +1,28 @@
+message any_network_protocol
+{
+	enum e_pkg_type
+	{
+		LOGIN_PKG,
+		LOGOUT_PKG,
+		CHAT_PKG,
+	}
+	required e_pkg_type pkg_type = 1;
+	required bstring data1 = 3;
+}
+
+message login_protocol
+{
+	required w32string user_name = 1;
+	required w32string user_pwd = 2;
+	required bstring user_ip = 3;
+}
+message logout_protocol
+{
+	required string user_name = 1;
+}
+
+message chat_protocol
+{
+  required vector<string> receivers = 1;
+  required wstring content = 2;
+}

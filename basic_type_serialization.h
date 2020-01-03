@@ -21,16 +21,25 @@ namespace Serialization
 		ESerializeType_INT64_TYPE, //7
 		ESerializeType_UINT64_TYPE, //8
 		ESerializeType_FLOAT32_TYPE, //9
-		ESerializeType_FLOAT64_TYPE, //10
+		ESerializeType_FLOAT64_TYPE, //10				
 		ESerializeType_STRING_TYPE,	//11
-		ESerializeType_MAX_BASIC_TYPE = ESerializeType_STRING_TYPE, //11				
-		ESerializeType_LIST, //12
-		ESerializeType_VECTOR, //13
-		ESerializeType_SET, //14
-		ESerializeType_MAP, //15		
-		ESerializeType_MSG, //16
-		ESerializeType_MSG_START_ID, //17
+		ESerializeType_BSTRING_TYPE,	//12
+		ESerializeType_WSTRING_TYPE,	//13
+		ESerializeType_W32STRING_TYPE,	//14
+		ESerializeType_MAX_BASIC_TYPE = ESerializeType_W32STRING_TYPE, //14			
+		ESerializeType_LIST, //15
+		ESerializeType_VECTOR, //16
+		ESerializeType_STACK, //17
+		ESerializeType_QUEUE, //18
+		ESerializeType_SET, //19
+		ESerializeType_MAP, //20			
+		ESerializeType_NAME, //21
+		ESerializeType_ENUM, //22
+		ESerializeType_MESSAGE, //23
+		ESerializeType_UNION, //24
+		ESerializeType_MSG_START_ID, //25
 	};
+
 	class DLL_EXPORT_IMPORT field_null_exception
 	{
 		std::string *field_name;
@@ -44,6 +53,7 @@ namespace Serialization
 	{
 	public:
 		static bool is_number_type(uint32_t type);
+		static bool is_enum_type(uint32_t type);
 		static uint32_t get_number_type_size(uint32_t type);
 		static void serialize(int8_t f, std::basic_string<unsigned char>& buf);
 		static void serialize(int16_t f, std::basic_string<unsigned char>& buf);
@@ -56,6 +66,9 @@ namespace Serialization
 		static void serialize(float f, std::basic_string<unsigned char>& buf);
 		static void serialize(double f, std::basic_string<unsigned char>& buf);
 		static void serialize(const std::string& f, std::basic_string<unsigned char>& buf);
+		static void serialize(const std::basic_string<uint8_t>& f, std::basic_string<unsigned char>& buf);
+		static void serialize(const std::basic_string<uint16_t>& f, std::basic_string<unsigned char>& buf);
+		static void serialize(const std::basic_string<uint32_t>& f, std::basic_string<unsigned char>& buf);
 		static int deserialize(int8_t &f, const void *buf, size_t &pos, size_t size);
 		static int deserialize(int16_t &f, const void *buf, size_t &pos, size_t size);
 		static int deserialize(int32_t &f, const void *buf, size_t &pos, size_t size);
@@ -67,6 +80,9 @@ namespace Serialization
 		static int deserialize(float &f, const void *buf, size_t &pos, size_t size);
 		static int deserialize(double &f, const void *buf, size_t &pos, size_t size);
 		static int deserialize(std::string &f, const void *buf, size_t &pos, size_t size, size_t string_size);
+		static int deserialize(std::basic_string<uint8_t> &f, const void *buf, size_t &pos, size_t size, size_t string_size);
+		static int deserialize(std::basic_string<uint16_t> &f, const void *buf, size_t &pos, size_t size, size_t string_size);
+		static int deserialize(std::basic_string<uint32_t> &f, const void *buf, size_t &pos, size_t size, size_t string_size);
 	};	
 }
 

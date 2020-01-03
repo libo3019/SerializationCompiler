@@ -8,7 +8,7 @@ Features:<br>
 Support int8, uint8, int16, uint16, int32, uint32, int64, uint64 types.<br>
 Support float32, float64 types.<br>
 Support bool type.<br>
-Support string types.<br>
+Support string, bstring(byte string), wstring(uint16 string), w32string(uint32 string) types.<br>
 Support enum type.<br>
 Support list, vector, set, map, stack, queue containers.<br>
 Support the definition of optional field (in default case).<br>
