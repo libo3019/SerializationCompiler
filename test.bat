@@ -1,18 +1,18 @@
-SerializationCompiler.exe -i data.def
+SerializationCompiler.exe -i data.idf
 if %errorlevel% neq 0 goto failure
-SerializationCompiler.exe -i data1.def
+SerializationCompiler.exe -i data1.idf
 if %errorlevel% neq 0 goto failure
-SerializationCompiler.exe -i data2.def
+SerializationCompiler.exe -i data2.idf
 if %errorlevel% neq 0 goto failure
-SerializationCompiler.exe -i data3.def
+SerializationCompiler.exe -i data3.idf
 if %errorlevel% neq 0 goto failure
-SerializationCompiler.exe -i data_pkg.def
+SerializationCompiler.exe -i data_pkg.idf
 if %errorlevel% neq 0 goto failure
-SerializationCompiler.exe -i class_file_struct.def
+SerializationCompiler.exe -i class_file_struct.idf
 if %errorlevel% neq 0 goto failure
-SerializationCompiler.exe -i data4.def
+SerializationCompiler.exe -i data4.idf
 if %errorlevel% neq 0 goto failure
-SerializationCompiler.exe -i data5.def
+SerializationCompiler.exe -i data5.idf
 if %errorlevel% neq 0 goto failure
 cl /EHsc /c data.cc
 if %errorlevel% neq 0 goto failure
