@@ -18,7 +18,7 @@ Support union like C/C++ union.<br>
 Support repeated field like a vector.<br>
 Support default value for integer, bool, string and enum type.<br>
 Support nested definition: a message or union or enum can be defined in the another message, union.<br>
-Support the high version of data where high version fields will be ignored when deserialization.
+Support the high version of data where high version fields will be ignored when deserializing.<br>
 Support complex container type who contains any container like “queue&lt;list&lt;stack&lt;vector&lt;msg1&gt;&gt;&gt;&gt;”.<br>
 
 You can use SerializationCompiler to process file formats and network protocols.
