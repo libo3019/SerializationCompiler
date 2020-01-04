@@ -22,6 +22,10 @@ SerializationCompiler.exe -i data8.idf
 if %errorlevel% neq 0 goto failure
 SerializationCompiler.exe -i data9.idf
 if %errorlevel% neq 0 goto failure
+SerializationCompiler.exe -i data10.idf
+if %errorlevel% neq 0 goto failure
+SerializationCompiler.exe -i data11.idf
+if %errorlevel% neq 0 goto failure
 cl /EHsc /c data.cc
 if %errorlevel% neq 0 goto failure
 cl /EHsc /c data1.cc
@@ -45,6 +49,10 @@ if %errorlevel% neq 0 goto failure
 cl /EHsc /c data8.cc
 if %errorlevel% neq 0 goto failure
 cl /EHsc /c data9.cc
+if %errorlevel% neq 0 goto failure
+cl /EHsc /c data10.cc
+if %errorlevel% neq 0 goto failure
+cl /EHsc /c data11.cc
 if %errorlevel% neq 0 goto failure
 goto success
 :failure
