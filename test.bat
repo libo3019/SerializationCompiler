@@ -26,33 +26,33 @@ SerializationCompiler.exe -i data10.idf
 if %errorlevel% neq 0 goto failure
 SerializationCompiler.exe -i data11.idf
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data.cc
+nmake /f data.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data1.cc
+nmake /f data1.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data2.cc
+nmake /f data2.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data3.cc
+nmake /f data3.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data_pkg.cc
+nmake /f data_pkg.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c class_file_struct.cc
+nmake /f class_file_struct.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data4.cc
+nmake /f data4.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data5.cc
+nmake /f data5.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data6.cc
+nmake /f data6.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data7.cc
+nmake /f data7.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data8.cc
+nmake /f data8.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data9.cc
+nmake /f data9.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data10.cc
+nmake /f data10.win.mak
 if %errorlevel% neq 0 goto failure
-cl /EHsc /c data11.cc
+nmake /f data11.win.mak
 if %errorlevel% neq 0 goto failure
 goto success
 :failure
