@@ -1,4 +1,4 @@
-package network.datapkg;
+namespace network.datapkg;
 message CHATMSG
 {
 	required char flag = 1;
