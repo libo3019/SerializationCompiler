@@ -1,0 +1,12 @@
+package network.datapkg;
+message CHATMSG
+{
+	required char flag = 1;
+	optional short data = 3;
+	required int pig = 31;
+	optional long idiot = 13;
+	required unsigned char flag1 = 11;
+	optional unsigned short data1 = 33;
+	required unsigned int pig1 = 3131;
+	optional unsigned long idiot1 = 1313;
+}
